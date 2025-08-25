@@ -58,13 +58,14 @@ select 209, 'data eng course'
 
 --for retriving all data
 select * from courseses
+
 --lets perform some operation
 --display all students whose age is greater than 20
 select * from student where age>20
 --select all course of computer science department
 select * from courseses where dept_id ='101'
 --display all student who belong from electronics department
-select * from student where dept_id=105
+select * from student where dept_id='105'
 --select student whose age is between 18 and 22
 select * from student where age between 18 and 22
 --inner joins
@@ -82,5 +83,15 @@ select student.name,courseses.course_name
 from student right join courseses
 on student.dept_id=courseses.dept_id
 
+--for backup
+select * into department_b from department
+--for data backup or not
+select* from department_b
+--syntax: select * into backup_table_name from original_table_name (which you want to backup)
+--if you want to backup perticular column backup then use where clause
+/*syntax:select employeeid,salary 
+into emp_backup
+from employee
+where employeeid in(1,5,8,9)
 
 
